@@ -14,12 +14,32 @@
 - [x] Making component testing function `src/components/__tests__/Chart.spec.tsx`
 - [x] Making Chart component `src/components/Chart.tsx`
 - [x] Making Chart storybook component `src/components/Chart.stories.mdx`
-- [ ] Making Default Props `src/components/Chart.defaultProps.ts`
+- [x] Making Default Props `src/components/Chart.defaultProps.ts`
 - [ ] Making Chart Props Type interface `src/components/Chart.types.ts`
 - [ ] Making 5-5 WindRose Chart component `src/components/WindRoseChart.tsx`
 - [ ] Chart Testing
 - [ ] Making github actions `.github/workflows/Deploy.yml`
 - [ ] Deploy module
+
+## Features
+
+- INPUT: Professionals respond to survey of how much they use a K-12 core competancy in each subject
+- OUTPUT: Interdisciplinarity Badge (ideally with mouseover tooltips). Wind-rose type graphic, displaying survey response magnitudes for each subject area core competency
+
+### Data Type
+
+```typescript
+interface DataType {
+  subject: string;
+  coreCompetency: string;
+  survey: number;
+}
+interface PropType {
+  data: DataType[];
+  width: number;
+  height: number;
+}
+```
 
 ## License
 

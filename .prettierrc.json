@@ -2,7 +2,7 @@
   "parser": "typescript",
   "semi": true,
   "trailingComma": "es5",
-  "printWidth": 120,
+  "printWidth": 70,
   "overrides": [
     {
       "files": [
