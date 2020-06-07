@@ -1,5 +1,7 @@
 # Windrose Chart Component
 
+![chart](doc/2020-06-08%2001.51.39.png)
+
 ## Roadmap
 
 - [x] VSCode setup `.vscode`
