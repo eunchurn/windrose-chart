@@ -5,5 +5,5 @@ import { Chart } from "../../index";
 
 test("Renders", async () => {
   const { getByRole } = render(<Chart />);
-  expect(getByRole("heading")).toHaveTextContent("Chart Component");
+  expect(getByRole("document")).toBeValid();
 });

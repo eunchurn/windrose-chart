@@ -1,8 +1,10 @@
 import {Meta, Story, Preview, Props} from '@storybook/addon-docs/blocks'
+import { Chart } from './Chart'
+import { ChartDefaultProps } from "./DefaultProps";
 
-import { Chart, ChartProps } from './Chart'
+<Meta title="Components/WindRoseChart" component={Chart} />
 
-<Meta title="Components/Chart" component={Chart} />
+const { data, columns, angles, width, height} = ChartDefaultProps;
 
 # Chart
 
@@ -14,7 +16,7 @@ import { Chart } from "windrose-chart"
 
 <Preview withSource="open">
   <Story name="Chart">
-    <Chart data={data} columns={columns} width={width} height={height}  />
+    <Chart />
   </Story>
 </Preview>
 
@@ -25,7 +27,7 @@ import { Chart } from "windrose-chart"
 ## Using different Prop Name
 
 <Preview withSource="open">
-  <Story name="Different Prop Name">
-    <Chart data={data} columns={columns} />
+  <Story name="Different Prop (soon)">
+    <Chart />
   </Story>
 </Preview>
