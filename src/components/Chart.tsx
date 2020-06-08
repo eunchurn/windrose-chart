@@ -1,21 +1,59 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-underscore-dangle */
 import * as React from "react";
 import * as d3 from "d3";
 import styled from "styled-components";
-import { DefaultProps, PropType, DataType } from "./DefaultProps";
+import { DefaultProps } from "./DefaultProps";
 
-export const AxisContainer = styled.div`
-  position: relative;
-`;
+export interface DataType {
+  [key: string]: number | null;
+}
 
-export const Axis = styled.svg`
-  .axis {
-    position: absolute;
-    top: 0;
-    left: 0;
-    stroke: gray;
-  }
-`;
+export interface StackKey {
+  key: string;
+}
+export interface State {
+  width: number;
+  height: number;
+}
+
+export interface PropType extends State {
+  /**
+   * Professionals respond to survey of how much they use a K-12 core competancy in each subject
+   */
+  data: DataType[];
+  /**
+   * Subjects
+   */
+  columns: string[];
+  /**
+   * Subjects colors
+   */
+  columnsColor: string[];
+  /**
+   * All core competency
+   */
+  angles: string[];
+  /**
+   * Max score
+   */
+  dataMax: number;
+  /**
+   * Target data keys
+   */
+  dataKeys: string[];
+  /**
+   * Mouse over Path color
+   */
+  mouseOverColor: string;
+  /**
+   * Mouse over competency text color
+   */
+  mouseOverTitleColor: string;
+  /**
+   * Mouseover survey score text color
+   */
+  mouseOverSurveyColor: string;
+}
 
 export function Chart(props: PropType): JSX.Element {
   const {
@@ -23,13 +61,16 @@ export function Chart(props: PropType): JSX.Element {
     height,
     data,
     columns,
+    columnsColor: z,
     angles,
     dataMax,
     dataKeys,
+    mouseOverColor,
+    mouseOverTitleColor,
+    mouseOverSurveyColor,
   } = props;
   const containerRef = React.useRef<SVGSVGElement>(null);
   const axisContainerRef = React.useRef<HTMLDivElement>(null);
-
   React.useEffect(() => {
     const svg = d3.select(containerRef.current);
     svg.selectAll("*").remove();
@@ -52,22 +93,7 @@ export function Chart(props: PropType): JSX.Element {
       .scaleBand()
       .range([0, 2 * Math.PI])
       .align(0);
-    const y = d3
-      .scaleLinear() // you can try scaleRadial but it scales differently
-      .range([innerRadius, outerRadius]);
-    const z = d3
-      .scaleOrdinal()
-      .range([
-        "#8e44ad",
-        "#4242f4",
-        "#42c5f4",
-        "#42f4ce",
-        "#42f456",
-        "#adf442",
-        "#f4e242",
-        "#f4a142",
-        "#f44242",
-      ]);
+    const y = d3.scaleLinear().range([innerRadius, outerRadius]);
     x.domain(angles.map((d) => d));
     xGroup.domain(columns.map((d) => d));
     y.domain([
@@ -76,39 +102,81 @@ export function Chart(props: PropType): JSX.Element {
         ? (d3.max(data, ({ total }) => total) as number)
         : dataMax,
     ]);
-    z.domain(dataKeys);
-    // Extend the domain slightly to match the range of [0, 2π].
     angle.domain([
       0,
       d3.max(data, (_, i): number => i + 1) as number,
     ]);
     radius.domain([0, d3.max(data, () => 0) as number]);
-    // radius.domain([]);
     const angleOffset = -360.0 / data.length / 2.0;
     const stackGen: d3.Stack<any, DataType, string> = d3
       .stack()
       .keys(dataKeys);
-    const arc = g
+    const arcVal: d3.Arc<SVGPathElement, d3.DefaultArcObject> = d3
+      .arc()
+      .innerRadius((d) => Number(y(d[0])))
+      .outerRadius((d) => Number(y(d[1])))
+      .startAngle((_d, i) => Number(x(angles[i])))
+      .endAngle((_d, i) => Number(x(angles[i])) + x.bandwidth())
+      .padAngle(0.0)
+      .padRadius(innerRadius);
+    const arcParent = g
       .append("g")
       .selectAll("g")
       .data(stackGen(data))
-      .enter()
-      .selectAll("path")
+      .enter();
+    const arc = arcParent
+      .selectAll<SVGPathElement, d3.Stack<any, DataType, string>>(
+        "path"
+      )
       .data((d) => d)
       .enter()
       .append("path");
-    const arcVal = d3
-      .arc()
-      .innerRadius((d) => y(d[0]))
-      .outerRadius((d) => y(d[1]))
-      .startAngle((_d, i) => x(angles[i]))
-      .endAngle((d, i) => x(angles[i]) + x.bandwidth())
-      .padAngle(0.0)
-      .padRadius(innerRadius);
     arc
       .attr("d", arcVal)
       .attr("transform", `rotate(${angleOffset})`)
-      .attr("fill", (d) => d.data.color);
+      .attr("fill", (d: d3.SeriesPoint<DataType>) => d.data.color)
+      .attr(
+        "class",
+        (_d: d3.SeriesPoint<DataType>, i: number) => `arc_${i}`
+      )
+      .on(
+        "mouseover",
+        (
+          d: d3.SeriesPoint<DataType>,
+          i: number,
+          n: SVGPathElement[]
+        ) => {
+          const target = d3.selectAll(`.arc_${i}`);
+          target.style("fill", () => mouseOverColor);
+          const bbox = n[i].getBBox();
+          arcParent
+            .append("text")
+            .attr("class", `tooltip_${i}`)
+            .attr("x", bbox.x + bbox.width / 2)
+            .attr("dy", bbox.y + bbox.height / 2)
+            .attr("text-anchor", "middle")
+            .style("font-size", 12)
+            .style("fill", mouseOverTitleColor)
+            .attr("font-weight", 600)
+            .text(`${d.data.coreCompetency}`);
+          arcParent
+            .append("text")
+            .attr("class", `tooltip_${i}`)
+            .attr("x", bbox.x + bbox.width / 2)
+            .attr("dy", bbox.y + bbox.height / 2 + 14)
+            .attr("text-anchor", "middle")
+            .style("font-size", 14)
+            .style("fill", mouseOverSurveyColor)
+            .attr("font-weight", 800)
+            .text(`${d.data.survey}`);
+        }
+      )
+      .on("mouseout", (d: d3.SeriesPoint<DataType>, i: number) => {
+        const target = d3.selectAll(`.arc_${i}`);
+        target.style("fill", d.data!.color || "#ffffff");
+        d3.selectAll(`.tooltip_${i}`).remove();
+      });
+
     const label = g
       .append("g")
       .selectAll("g")
@@ -116,25 +184,18 @@ export function Chart(props: PropType): JSX.Element {
       .enter()
       .append("g")
       .attr("text-anchor", "middle")
-      .attr(
-        "transform",
-        (d) =>
-          `rotate(${
-            ((xGroup(d) + xGroup.bandwidth() / 2) * 180) / Math.PI -
-            (90 - angleOffset)
-          })translate(${outerRadius},0)`
-      );
+      .attr("transform", (d) => {
+        if (typeof d === "undefined") return null;
+        return `rotate(${
+          ((Number(xGroup(d)) + xGroup.bandwidth() / 2) * 180) /
+            Math.PI -
+          (90 - angleOffset)
+        })translate(${outerRadius},0)`;
+      });
     label
       .append("text")
-      // .attr("transform", "rotate(90)translate(0,-9)")
-      // eslint-disable-next-line no-confusing-arrow
-      .attr("transform", (d) =>
-        (xGroup(d) || 0 + xGroup.bandwidth() / 2 + Math.PI / 2) %
-        (2 * Math.PI < Math.PI)
-          ? "rotate(-90)translate(0,16)"
-          : "rotate(90)translate(0,-9)"
-      )
-      .text((d, i) => columns[i])
+      .attr("transform", "rotate(90)translate(0,-9)")
+      .text((_d, i) => columns[i])
       .style("font-size", 14);
     const yAxis = g.append("g").attr("text-anchor", "middle");
     const yTick = yAxis
@@ -172,7 +233,7 @@ export function Chart(props: PropType): JSX.Element {
       .append("rect")
       .attr("width", 18)
       .attr("height", 18)
-      .attr("fill", z);
+      .attr("fill", (_d, i) => z[i]);
     legend
       .append("text")
       .attr("x", 24)
@@ -195,14 +256,31 @@ export function Chart(props: PropType): JSX.Element {
   );
 }
 
+export const AxisContainer = styled.div`
+  position: relative;
+`;
+
+export const Axis = styled.svg`
+  .axis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    stroke: gray;
+  }
+`;
+
 const {
   data,
   angles,
   columns,
+  columnsColor,
   width,
   height,
   dataMax,
   dataKeys,
+  mouseOverColor,
+  mouseOverTitleColor,
+  mouseOverSurveyColor,
 } = DefaultProps;
 
 Chart.defaultProps = {
@@ -210,7 +288,11 @@ Chart.defaultProps = {
   dataMax,
   angles,
   columns,
+  columnsColor,
   width,
   height,
   dataKeys,
+  mouseOverColor,
+  mouseOverTitleColor,
+  mouseOverSurveyColor,
 };

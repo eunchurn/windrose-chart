@@ -1,6 +1,6 @@
 # Windrose Chart Component
 
-![chart](doc/2020-06-08%2001.51.39.png)
+![chart](doc/2020-06-09%2002.59.40.png)
 
 ## Roadmap
 
@@ -19,7 +19,7 @@
 - [x] Making Default Props `src/components/Chart.defaultProps.ts`
 - [x] Making Chart Props Type interface `src/components/Chart.types.ts`
 - [x] Making 5-5 WindRose Chart component `src/components/WindRoseChart.tsx`
-- [ ] Mouse over event
+- [x] Mouse over event
 - [ ] Typescript / Exception check
 - [ ] Chart Testing
 - [ ] Making github actions `.github/workflows/Deploy.yml`
@@ -33,25 +33,57 @@
 ### Data Type
 
 ```typescript
-interface DataType {
-  [key: string]: number;
+export interface DataType {
+  [key: string]: number | null;
 }
 
-interface StackKey {
+export interface StackKey {
   key: string;
 }
-interface State {
+export interface State {
   width: number;
   height: number;
 }
 
-interface PropType extends State {
+export interface PropType extends State {
+  /**
+   * Professionals respond to survey of how much they use a K-12 core competancy in each subject
+   */
   data: DataType[];
+  /**
+   * Subjects
+   */
   columns: string[];
+  /**
+   * Subjects colors
+   */
+  columnsColor: string[];
+  /**
+   * All core competency
+   */
   angles: string[];
+  /**
+   * Max score
+   */
   dataMax: number;
+  /**
+   * Target data keys
+   */
   dataKeys: string[];
+  /**
+   * Mouse over Path color
+   */
+  mouseOverColor: string;
+  /**
+   * Mouse over competency text color
+   */
+  mouseOverTitleColor: string;
+  /**
+   * Mouseover survey score text color
+   */
+  mouseOverSurveyColor: string;
 }
+
 ```
 
 ## Default data
@@ -271,8 +303,19 @@ export const DefaultProps = {
     "21st Century Skills",
     "Arts, Crafts & Labor",
   ], // Columns of group (array string)
+    columnsColor: [
+    "#8e44ad",
+    "#c0392b",
+    "#27ae60",
+    "#2c3e50",
+    "#0984e3",
+    "#e84393",
+  ],
   angles, // All pie chart angles (array string)
   dataKeys: ["survey"], // target keys of `data` / legnth = 1, no stack data in this time
+  mouseOverColor: "#1abc9c",
+  mouseOverTitleColor: "#e67e22",
+  mouseOverSurveyColor: "#e74c3c",
 };
 ```
 

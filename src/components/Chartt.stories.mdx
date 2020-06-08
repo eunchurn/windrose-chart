@@ -1,33 +1,30 @@
 import {Meta, Story, Preview, Props} from '@storybook/addon-docs/blocks'
 import { Chart } from './Chart'
-import { ChartDefaultProps } from "./DefaultProps";
+import { DefaultProps } from "./DefaultProps";
 
 <Meta title="Components/WindRoseChart" component={Chart} />
 
-const { data, columns, angles, width, height} = ChartDefaultProps;
+# Custom WindRose Chart
 
-# Chart
+## Features
 
-This is the `Chart`
+- INPUT: Professionals respond to survey of how much they use a K-12 core competancy in each subject
+- OUTPUT: Interdisciplinarity Badge (ideally with mouseover tooltips). Wind-rose type graphic, displaying survey response magnitudes for each subject area core competency
+
 
 ```jsx
-import { Chart } from "windrose-chart"
+import { Chart } from "windrose-chart";
+import { data } from "./DefaultProps";
 ```
+
+import { data } from "./DefaultProps";
 
 <Preview withSource="open">
   <Story name="Chart">
-    <Chart />
+    <Chart data={data} />
   </Story>
 </Preview>
 
 ## Props
 
 <Props of={Chart} />
-
-## Using different Prop Name
-
-<Preview withSource="open">
-  <Story name="Different Prop (soon)">
-    <Chart />
-  </Story>
-</Preview>
