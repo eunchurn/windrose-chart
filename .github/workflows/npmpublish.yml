@@ -26,6 +26,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - run: npm ci
       - name: "Publish to Node Package Manager"
         run: |
           npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
@@ -51,6 +52,7 @@ jobs:
           scope: '@eunchurn'
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_GITHUB_TOKEN}}
+      - run: npm ci
       - name: "Publish to Github Package Registry"
         run: |
           echo "registry=https://npm.pkg.github.com/eunchurn" >> ~/.npmrc
