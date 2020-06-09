@@ -32,6 +32,56 @@
 - INPUT: Professionals respond to survey of how much they use a K-12 core competancy in each subject
 - OUTPUT: Interdisciplinarity Badge (ideally with mouseover tooltips). Wind-rose type graphic, displaying survey response magnitudes for each subject area core competency
 
+## Usage
+
+### Install
+
+```bash
+npm install @eunchurn/windrose-chart
+```
+
+or
+
+```bash
+yarn install @eunchurn/windrose-chart
+```
+
+### Component using
+
+- Refer `DefaultProps.tsx` data format
+
+```tsx
+import Chart from "@eunchurn/windrose-chart";
+
+export default function WindRoseChart() {
+  return (
+    <Chart />
+  )
+}
+```
+
+- With `props`
+
+### React
+
+```tsx
+import Chart from "./Chart"
+
+export default function WindRoseChart() {
+  return (
+    <Chart 
+      data={data} 
+      width={800} 
+      height={500} 
+      dataMax={5} 
+      columns={columns} 
+      angles={angles}
+      dataKeys={["survey"]}
+    />
+  )
+};
+```
+
 ### Data Type
 
 ```typescript
@@ -321,7 +371,7 @@ export const DefaultProps = {
 };
 ```
 
-## Usage
+## Development
 
 ### Install
 
@@ -338,25 +388,9 @@ npm i
 npm run storybook
 ```
 
-### React
+## Pull request
 
-```jsx
-import { Chart } from "./Chart"
-
-export default function YourApp() {
-  return (
-    <Chart 
-      data={data} 
-      width={800} 
-      height={500} 
-      dataMax={5} 
-      columns={columns} 
-      angles={angles}
-      dataKeys={["survey"]}
-    />
-  )
-};
-```
+Feel free to create a pull request, <https://github.com/eunchurn/windrose-chart/pulls>
 
 ## License
 
