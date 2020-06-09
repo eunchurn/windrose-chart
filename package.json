@@ -1,10 +1,9 @@
 {
   "name": "@eunchurn/windrose-chart",
-  "version": "0.0.1-beta.2",
+  "version": "0.0.1-beta.3",
   "description": "React Windrose Chart Component (D3js implemented SVG rendering)",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "typings": "dist/index.d.ts",
   "types": "dist/index.d.ts",
   "files": [
     "dist/"
@@ -38,7 +37,7 @@
     "typecheck": "yarn tsc --project ./tsconfig-typecheck.json",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
-    "build": "NODE_ENV=production rollup -c",
+    "build": "npm run check-types && NODE_ENV=production rollup -c",
     "prepublish": "npm run build",
     "storybook": "start-storybook -p 6007",
     "storybook:build": "build-storybook -o build-story",
