@@ -22,10 +22,10 @@
 - [x] Making Chart Props Type interface `src/components/Chart.types.ts`
 - [x] Making 5-5 WindRose Chart component `src/components/WindRoseChart.tsx`
 - [x] Mouse over event
-- [ ] Typescript / Exception check
-- [ ] Chart Testing
-- [ ] Making github actions `.github/workflows/Deploy.yml`
-- [ ] Deploy module
+- [x] Typescript / Exception check
+- [x] Chart Testing
+- [x] Making github actions `.github/workflows/Deploy.yml`
+- [x] Deploy module
 
 ## Features
 
