@@ -49,11 +49,11 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@eunchurn'
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_GITHUB_TOKEN}}
       - run: npm ci
       - name: "Publish to Github Package Registry"
         run: |
           echo "registry=https://npm.pkg.github.com/eunchurn" >> ~/.npmrc
           npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_GITHUB_TOKEN}}
