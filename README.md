@@ -32,6 +32,10 @@
 - INPUT: Professionals respond to survey of how much they use a K-12 core competancy in each subject
 - OUTPUT: Interdisciplinarity Badge (ideally with mouseover tooltips). Wind-rose type graphic, displaying survey response magnitudes for each subject area core competency
 
+### Demo
+
+<https://eunchurn.github.io/windrose-chart>
+
 ## Usage
 
 ### Install
