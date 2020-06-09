@@ -4,6 +4,5 @@
     "noEmit": true,
     "sourceMap": false,
     "incremental": false
-  },
-  "include": ["src"]
+  }
 }

@@ -1,22 +1,20 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable no-underscore-dangle */
 import * as React from "react";
 import * as d3 from "d3";
 import styled from "styled-components";
 import { DefaultProps } from "./DefaultProps";
 
-export interface DataType {
+interface DataType {
   [key: string]: number | null;
 }
 
-export interface StackKey {
-  key: string;
-}
-export interface State {
+interface State {
   width: number;
   height: number;
 }
 
-export interface PropType extends State {
+interface PropType extends State {
   /**
    * Professionals respond to survey of how much they use a K-12 core competancy in each subject
    */
@@ -124,14 +122,18 @@ export function Chart(props: PropType): JSX.Element {
       .selectAll("g")
       .data(stackGen(data))
       .enter();
-    const arc = arcParent
-      .selectAll<SVGPathElement, d3.Stack<any, DataType, string>>(
-        "path"
-      )
+    const arc: d3.Selection<
+      SVGPathElement,
+      d3.SeriesPoint<DataType>,
+      d3.EnterElement,
+      d3.Series<DataType, string>
+    > = arcParent
+      .selectAll<SVGPathElement, d3.SeriesPoint<DataType>>("path")
       .data((d) => d)
       .enter()
       .append("path");
     arc
+      // @ts-ignore
       .attr("d", arcVal)
       .attr("transform", `rotate(${angleOffset})`)
       .attr("fill", (d: d3.SeriesPoint<DataType>) => d.data.color)
@@ -296,3 +298,5 @@ Chart.defaultProps = {
   mouseOverTitleColor,
   mouseOverSurveyColor,
 };
+
+export default Chart;

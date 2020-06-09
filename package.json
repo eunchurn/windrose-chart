@@ -1,16 +1,17 @@
 {
-  "name": "windrose-chart",
+  "name": "@eunchurn/windrose-chart",
   "version": "0.0.1",
-  "description": "5-5 React Wind Rose Chart Component (D3js implemented SVG rendering)",
+  "description": "React Windrose Chart Component (D3js implemented SVG rendering)",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/eunchurn/windrose-chart"
+    "url": "git+https://github.com/eunchurn/windrose-chart.git"
   },
   "author": {
     "name": "Eunchurn Park",
@@ -37,7 +38,7 @@
     "typecheck": "yarn tsc --project ./tsconfig-typecheck.json",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
-    "build": "rollup -c",
+    "build": "NODE_ENV=production rollup -c",
     "prepublish": "npm run build",
     "storybook": "start-storybook -p 6007",
     "storybook:build": "build-storybook -o build-story",
@@ -52,6 +53,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.10.1",
     "@rollup/plugin-babel": "^5.0.3",
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
@@ -102,7 +104,6 @@
   },
   "dependencies": {
     "d3": "^5.16.0",
-    "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.0"
