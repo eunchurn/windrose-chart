@@ -46,7 +46,7 @@ or
 yarn install @eunchurn/windrose-chart
 ```
 
-### Component using
+### React Component (defaultProps)
 
 - Refer `DefaultProps.tsx` data format
 
@@ -62,10 +62,10 @@ export default function WindRoseChart() {
 
 - With `props`
 
-### React
+### React Component (Props)
 
 ```tsx
-import Chart from "./Chart"
+import Chart from "@eunchurn/windrose-chart"
 
 export default function WindRoseChart() {
   return (
