@@ -4,7 +4,8 @@
 const NO_COVERAGE = process.env.NO_COVERAGE === "1";
 const CLEAR_CONSOLE = process.env.CLEAR_CONSOLE === "1";
 
-const notice = () => console.log("Using Jest config from `jest.config.js`");
+const notice = () =>
+  console.log("Using Jest config from `jest.config.js`");
 
 if (CLEAR_CONSOLE) {
   require("clear")();
@@ -19,7 +20,9 @@ if (NO_COVERAGE) {
   console.log("Coverage not collected due to NO_COVERAGE=1");
 }
 
-console.log("Type checking is disabled during Jest for performance reasons, use `jest typecheck` when necessary.");
+console.log(
+  "Type checking is disabled during Jest for performance reasons, use `jest typecheck` when necessary."
+);
 
 module.exports = {
   rootDir: __dirname,
@@ -32,9 +35,18 @@ module.exports = {
   // preset: 'ts-jest/presets/js-with-ts',
   // which files to test and which to ignore
   preset: "ts-jest",
-  testMatch: ["**/__tests__/*.test.(ts|tsx)", "**/__tests__/*.spec.(ts|tsx)"],
+  testMatch: [
+    "**/__tests__/*.test.(ts|tsx)",
+    "**/__tests__/*.spec.(ts|tsx)",
+  ],
   testEnvironment: "jsdom",
-  testPathIgnorePatterns: ["/node_modules/", "/tmp/", "/coverage/", "/stories/", "/\\.storybook/"],
+  testPathIgnorePatterns: [
+    "/node_modules/",
+    "/tmp/",
+    "/coverage/",
+    "/stories/",
+    "/\\.storybook/",
+  ],
   // don't watch for file changes in node_modules
   watchPathIgnorePatterns: ["/node_modules/"],
   // jest automock settings
@@ -45,8 +57,16 @@ module.exports = {
   // setupFilesAfterEnv: [`${__dirname}/setup/setupAfterEnv.ts`],
   // coverage settings
   collectCoverage: NO_COVERAGE === false,
-  collectCoverageFrom: NO_COVERAGE ? [] : ["**/*.{ts,tsx}", "!**/*.d.ts", "!**/node_modules/**"],
-  coveragePathIgnorePatterns: ["/node_modules/", "\\.json$", "/__tests__/", "/stories/", "/\\.storybook/"],
+  collectCoverageFrom: NO_COVERAGE
+    ? []
+    : ["**/*.{ts,tsx}", "!**/*.d.ts", "!**/node_modules/**"],
+  coveragePathIgnorePatterns: [
+    "/node_modules/",
+    "\\.json$",
+    "/__tests__/",
+    "/stories/",
+    "/\\.storybook/",
+  ],
 
   globals: {
     "ts-jest": {
@@ -62,9 +82,12 @@ module.exports = {
     },
   },
 
-  transformIgnorePatterns: ["/node_modules/(?!(lodash-es|antd|[^/]+/es|rc-animate|rc-util)/).*"],
+  transformIgnorePatterns: [
+    "/node_modules/(?!(lodash-es|antd|[^/]+/es|rc-animate|rc-util)/).*",
+  ],
   transform: {
     "\\.(ts|tsx)$": "ts-jest",
-    "/node_modules/((lodash-es|[^/]+/es)|rc-animate|rc-util)/.*": "ts-jest",
+    "/node_modules/((lodash-es|[^/]+/es)|rc-animate|rc-util)/.*":
+      "ts-jest",
   },
 };

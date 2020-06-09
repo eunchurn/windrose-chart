@@ -1,5 +1,7 @@
 # Windrose Chart Component
 
+![Node.js Package](https://github.com/eunchurn/windrose-chart/workflows/Node.js%20Package/badge.svg) [![codecov](https://codecov.io/gh/eunchurn/windrose-chart/branch/master/graph/badge.svg)](https://codecov.io/gh/eunchurn/windrose-chart) [![npm version](https://badge.fury.io/js/%40eunchurn%2Fwindrose-chart.svg)](https://badge.fury.io/js/%40eunchurn%2Fwindrose-chart)
+
 ![chart](doc/2020-06-09%2002.59.40.png)
 
 ## Roadmap
