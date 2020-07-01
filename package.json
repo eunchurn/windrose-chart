@@ -109,7 +109,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.0",
-    "snyk": "^1.336.0"
+    "snyk": "^1.337.0"
   },
   "snyk": true
 }
