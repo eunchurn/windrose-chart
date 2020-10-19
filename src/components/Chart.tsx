@@ -1,59 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable no-underscore-dangle */
 import * as React from "react";
 import * as d3 from "d3";
 import styled from "styled-components";
 import { DefaultProps } from "./DefaultProps";
-
-interface DataType {
-  [key: string]: number | null;
-}
-
-interface State {
-  width: number;
-  height: number;
-}
-
-interface PropType extends State {
-  /**
-   * Professionals respond to survey of how much they use a K-12 core competancy in each subject
-   */
-  data: DataType[];
-  /**
-   * Subjects
-   */
-  columns: string[];
-  /**
-   * Subjects colors
-   */
-  columnsColor: string[];
-  /**
-   * All core competency
-   */
-  angles: string[];
-  /**
-   * Max score
-   */
-  dataMax: number;
-  /**
-   * Target data keys
-   */
-  dataKeys: string[];
-  /**
-   * Mouse over Path color
-   */
-  mouseOverColor: string;
-  /**
-   * Mouse over competency text color
-   */
-  mouseOverTitleColor: string;
-  /**
-   * Mouseover survey score text color
-   */
-  mouseOverSurveyColor: string;
-}
+import { PropType, DataType } from "./Types";
 
 export function Chart(props: PropType): JSX.Element {
   const {
@@ -212,9 +161,11 @@ export function Chart(props: PropType): JSX.Element {
       .attr("fill", "none")
       .attr("stroke", "gray")
       .attr("stroke-dasharray", "4,4")
+      // @ts-ignore
       .attr("r", y);
     yTick
       .append("text")
+      // @ts-ignore
       .attr("y", (d) => -y(d))
       .attr("dy", "-0.35em")
       .attr("x", () => -10)
