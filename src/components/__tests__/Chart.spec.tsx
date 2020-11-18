@@ -2,6 +2,7 @@ import * as React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import Chart from "../../index";
+import "jest-styled-components";
 
 describe("<Chart />", () => {
   it("matches snapshot", () => {

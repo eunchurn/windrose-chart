@@ -20,6 +20,7 @@
     "react/jsx-filename-extension": "off",
     "import/prefer-default-export": "off",
     "no-use-before-define": "off",
+    "import/no-named-as-default": "off",
     "@typescript-eslint/no-use-before-define": ["off"],
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-non-null-assertion": "off"
