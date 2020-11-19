@@ -1,6 +1,6 @@
 # Windrose Chart Component
 
-![Node.js Package](https://github.com/eunchurn/windrose-chart/workflows/Node.js%20Package/badge.svg) ![Unit Test](https://github.com/eunchurn/windrose-chart/workflows/Unit%20Test/badge.svg?branch=master) ![Deploy Storybook](https://github.com/eunchurn/windrose-chart/workflows/Deploy%20Storybook/badge.svg) [![codecov](https://codecov.io/gh/eunchurn/windrose-chart/branch/master/graph/badge.svg)](https://codecov.io/gh/eunchurn/windrose-chart) [![npm version](https://badge.fury.io/js/%40eunchurn%2Fwindrose-chart.svg)](https://badge.fury.io/js/%40eunchurn%2Fwindrose-chart) ![CodeQL](https://github.com/eunchurn/windrose-chart/workflows/CodeQL/badge.svg)
+![Node.js Package](https://github.com/eunchurn/windrose-chart/workflows/Node.js%20Package/badge.svg) ![Unit Test](https://github.com/eunchurn/windrose-chart/workflows/Unit%20Test/badge.svg?branch=master) ![Deploy Storybook](https://github.com/eunchurn/windrose-chart/workflows/Deploy%20Storybook/badge.svg) [![codecov](https://codecov.io/gh/eunchurn/windrose-chart/branch/master/graph/badge.svg)](https://codecov.io/gh/eunchurn/windrose-chart) [![npm version](https://badge.fury.io/js/%40eunchurn%2Fwindrose-chart.svg)](https://badge.fury.io/js/%40eunchurn%2Fwindrose-chart) ![CodeQL](https://github.com/eunchurn/windrose-chart/workflows/CodeQL/badge.svg) [![CLA assistant](https://cla-assistant.io/readme/badge/eunchurn/windrose-chart)](https://cla-assistant.io/eunchurn/windrose-chart)
 
 ![chart](doc/2020-06-09%2002.59.40.png)
 
