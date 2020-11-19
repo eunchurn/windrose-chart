@@ -32,7 +32,7 @@ jobs:
           npm install
       - name: TypeCheck 📝
         run: |
-          npm typecheck
+          npm run typecheck
       - name: Unit Testing 🚥 
         run: |
           npm run test
