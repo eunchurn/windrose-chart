@@ -1,4 +1,4 @@
-name: Storybook Deploy
+name: Testing
 
 on:
   push:
