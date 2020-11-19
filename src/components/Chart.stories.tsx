@@ -6,11 +6,11 @@ const Template: Story<React.ComponentProps<typeof Chart>> = (
   args
 ) => <Chart {...args} />;
 
-export const FirstStory = Template.bind({});
-FirstStory.args = {
+export const WindroseChart = Template.bind({});
+WindroseChart.args = {
   name: "Chart",
 };
 export default {
   component: Chart,
-  title: "Components/Wind Rose Chart",
+  title: "Components",
 };
