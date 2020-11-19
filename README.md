@@ -2,30 +2,8 @@
 
 ![Node.js Package](https://github.com/eunchurn/windrose-chart/workflows/Node.js%20Package/badge.svg) ![Unit Test](https://github.com/eunchurn/windrose-chart/workflows/Unit%20Test/badge.svg?branch=master) ![Deploy Storybook](https://github.com/eunchurn/windrose-chart/workflows/Deploy%20Storybook/badge.svg) [![codecov](https://codecov.io/gh/eunchurn/windrose-chart/branch/master/graph/badge.svg)](https://codecov.io/gh/eunchurn/windrose-chart) [![npm version](https://badge.fury.io/js/%40eunchurn%2Fwindrose-chart.svg)](https://badge.fury.io/js/%40eunchurn%2Fwindrose-chart) ![CodeQL](https://github.com/eunchurn/windrose-chart/workflows/CodeQL/badge.svg) [![CLA assistant](https://cla-assistant.io/readme/badge/eunchurn/windrose-chart)](https://cla-assistant.io/eunchurn/windrose-chart)
 
+
 ![chart](doc/2020-06-09%2002.59.40.png)
-
-## Roadmap
-
-- [x] VSCode setup `.vscode`
-- [x] Typescript setup `tsconfig.json`
-- [x] Rollup setup `rollup.config.js`
-- [x] ESLint / Prettier setup `.eslint.json`, `.eslintignore`
-- [x] Storybook setup `.storybook/config.tsx`
-- [x] Storybook webpack setup `.storybook/webpack.config.js`
-- [x] Storybook addon setup:  `.storybook/main.tsx`
-- [x] Making entry point `src/index.ts`
-- [x] Making default component `src/components/Chart.tsx`
-- [x] Making component testing function `src/components/__tests__/Chart.spec.tsx`
-- [x] Making Chart component `src/components/Chart.tsx`
-- [x] Making Chart storybook component `src/components/Chart.stories.mdx`
-- [x] Making Default Props `src/components/Chart.defaultProps.ts`
-- [x] Making Chart Props Type interface `src/components/Chart.types.ts`
-- [x] Making 5-5 WindRose Chart component `src/components/WindRoseChart.tsx`
-- [x] Mouse over event
-- [x] Typescript / Exception check
-- [x] Chart Testing
-- [x] Making github actions `.github/workflows/Deploy.yml`
-- [x] Deploy module
 
 ## Features
 
