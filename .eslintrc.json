@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["typescript", "import"],
+  "plugins": ["typescript", "import", "react-hooks"],
   "extends": [
     "airbnb",
     "prettier",
@@ -8,7 +8,8 @@
     "typescript/prettier",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "plugin:react-hooks/recommended"
   ],
   "rules": {
     "prettier/prettier": "error",
@@ -18,7 +19,9 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
     "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
     "no-use-before-define": "off",
     "import/no-named-as-default": "off",
     "@typescript-eslint/no-use-before-define": ["off"],
