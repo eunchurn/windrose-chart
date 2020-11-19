@@ -1,57 +1,11 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable no-underscore-dangle */
+/* eslint-disable react/no-this-in-sfc */
+/* eslint-disable func-names */
 import * as React from "react";
 import * as d3 from "d3";
 import styled from "styled-components";
+import { debounce } from "lodash";
 import { DefaultProps } from "./DefaultProps";
-
-interface DataType {
-  [key: string]: number | null;
-}
-
-interface State {
-  width: number;
-  height: number;
-}
-
-interface PropType extends State {
-  /**
-   * Professionals respond to survey of how much they use a K-12 core competancy in each subject
-   */
-  data: DataType[];
-  /**
-   * Subjects
-   */
-  columns: string[];
-  /**
-   * Subjects colors
-   */
-  columnsColor: string[];
-  /**
-   * All core competency
-   */
-  angles: string[];
-  /**
-   * Max score
-   */
-  dataMax: number;
-  /**
-   * Target data keys
-   */
-  dataKeys: string[];
-  /**
-   * Mouse over Path color
-   */
-  mouseOverColor: string;
-  /**
-   * Mouse over competency text color
-   */
-  mouseOverTitleColor: string;
-  /**
-   * Mouseover survey score text color
-   */
-  mouseOverSurveyColor: string;
-}
+import { PropType, DataType } from "./Types";
 
 export function Chart(props: PropType): JSX.Element {
   const {
@@ -143,14 +97,19 @@ export function Chart(props: PropType): JSX.Element {
       )
       .on(
         "mouseover",
-        (
-          d: d3.SeriesPoint<DataType>,
-          i: number,
-          n: SVGPathElement[]
-        ) => {
-          const target = d3.selectAll(`.arc_${i}`);
-          target.style("fill", () => mouseOverColor);
-          const bbox = n[i].getBBox();
+        debounce(function (
+          this: SVGPathElement,
+          _event: any,
+          d: d3.SeriesPoint<DataType>
+        ) {
+          const classname = this.getAttribute("class") || "arc_1";
+          const i = classname.split("_")[1];
+          this.setAttribute("fill", mouseOverColor);
+          this.setAttribute(
+            "style",
+            "transition: fill 0.5s; cursor: pointer;"
+          );
+          const bbox = this.getBBox();
           arcParent
             .append("text")
             .attr("class", `tooltip_${i}`)
@@ -159,6 +118,8 @@ export function Chart(props: PropType): JSX.Element {
             .attr("text-anchor", "middle")
             .style("font-size", 12)
             .style("fill", mouseOverTitleColor)
+            .style("opacity", 1)
+            .style("transition", "opacity 0.2s")
             .attr("font-weight", 600)
             .text(`${d.data.coreCompetency}`);
           arcParent
@@ -169,15 +130,31 @@ export function Chart(props: PropType): JSX.Element {
             .attr("text-anchor", "middle")
             .style("font-size", 14)
             .style("fill", mouseOverSurveyColor)
+            .style("opacity", 1)
+            .style("transition", "opacity 0.2s")
             .attr("font-weight", 800)
             .text(`${d.data.survey}`);
-        }
+        },
+        0)
       )
-      .on("mouseout", (d: d3.SeriesPoint<DataType>, i: number) => {
-        const target = d3.selectAll(`.arc_${i}`);
-        target.style("fill", d.data!.color || "#ffffff");
-        d3.selectAll(`.tooltip_${i}`).remove();
-      });
+      .on(
+        "mouseout",
+        debounce(function (
+          this: SVGPathElement,
+          _event: any,
+          d: d3.SeriesPoint<DataType>
+        ) {
+          const classname = this.getAttribute("class") || "arc_1";
+          const i = classname.split("_")[1];
+          this.setAttribute(
+            "fill",
+            String(d.data!.color) || "#ffffff"
+          );
+          // this.setAttribute("style", "opacity: 0");
+          d3.selectAll(`.tooltip_${i}`).remove();
+        },
+        0)
+      );
 
     const label = g
       .append("g")
@@ -210,9 +187,11 @@ export function Chart(props: PropType): JSX.Element {
       .attr("fill", "none")
       .attr("stroke", "gray")
       .attr("stroke-dasharray", "4,4")
+      // @ts-ignore
       .attr("r", y);
     yTick
       .append("text")
+      // @ts-ignore
       .attr("y", (d) => -y(d))
       .attr("dy", "-0.35em")
       .attr("x", () => -10)

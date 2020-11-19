@@ -1,13 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Chart /> matches snapshot 1`] = `
+.c0 {
+  position: relative;
+}
+
+.c1 .axis {
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke: gray;
+}
+
 <div>
   <div
-    class="sc-AxjAm iFRHBp"
+    class="c0"
     role="main"
   >
     <svg
-      class="sc-AxirZ hRSoIo axis"
+      class="c1 axis"
       height="500"
       role="document"
       width="600"
