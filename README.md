@@ -4,29 +4,6 @@
 
 ![chart](doc/2020-06-09%2002.59.40.png)
 
-## Roadmap
-
-- [x] VSCode setup `.vscode`
-- [x] Typescript setup `tsconfig.json`
-- [x] Rollup setup `rollup.config.js`
-- [x] ESLint / Prettier setup `.eslint.json`, `.eslintignore`
-- [x] Storybook setup `.storybook/config.tsx`
-- [x] Storybook webpack setup `.storybook/webpack.config.js`
-- [x] Storybook addon setup:  `.storybook/main.tsx`
-- [x] Making entry point `src/index.ts`
-- [x] Making default component `src/components/Chart.tsx`
-- [x] Making component testing function `src/components/__tests__/Chart.spec.tsx`
-- [x] Making Chart component `src/components/Chart.tsx`
-- [x] Making Chart storybook component `src/components/Chart.stories.mdx`
-- [x] Making Default Props `src/components/Chart.defaultProps.ts`
-- [x] Making Chart Props Type interface `src/components/Chart.types.ts`
-- [x] Making 5-5 WindRose Chart component `src/components/WindRoseChart.tsx`
-- [x] Mouse over event
-- [x] Typescript / Exception check
-- [x] Chart Testing
-- [x] Making github actions `.github/workflows/Deploy.yml`
-- [x] Deploy module
-
 ## Features
 
 - INPUT: Professionals respond to survey of how much they use a K-12 core competancy in each subject
