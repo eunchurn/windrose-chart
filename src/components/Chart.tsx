@@ -3,9 +3,10 @@
 import * as React from "react";
 import * as d3 from "d3";
 import styled from "styled-components";
-import { debounce } from "lodash";
+import ReactTooltip from "react-tooltip";
 import { DefaultProps } from "./DefaultProps";
 import { PropType, DataType } from "./Types";
+import { isNull } from "lodash";
 
 export function Chart(props: PropType): JSX.Element {
   const {
@@ -95,66 +96,28 @@ export function Chart(props: PropType): JSX.Element {
         "class",
         (_d: d3.SeriesPoint<DataType>, i: number) => `arc_${i}`
       )
-      .on(
-        "mouseover",
-        debounce(function (
-          this: SVGPathElement,
-          _event: any,
-          d: d3.SeriesPoint<DataType>
-        ) {
-          const classname = this.getAttribute("class") || "arc_1";
-          const i = classname.split("_")[1];
-          this.setAttribute("fill", mouseOverColor);
-          this.setAttribute(
-            "style",
-            "transition: fill 0.5s; cursor: pointer;"
-          );
-          const bbox = this.getBBox();
-          arcParent
-            .append("text")
-            .attr("class", `tooltip_${i}`)
-            .attr("x", bbox.x + bbox.width / 2)
-            .attr("dy", bbox.y + bbox.height / 2)
-            .attr("text-anchor", "middle")
-            .style("font-size", 12)
-            .style("fill", mouseOverTitleColor)
-            .style("opacity", 1)
-            .style("transition", "opacity 0.2s")
-            .attr("font-weight", 600)
-            .text(`${d.data.coreCompetency}`);
-          arcParent
-            .append("text")
-            .attr("class", `tooltip_${i}`)
-            .attr("x", bbox.x + bbox.width / 2)
-            .attr("dy", bbox.y + bbox.height / 2 + 14)
-            .attr("text-anchor", "middle")
-            .style("font-size", 14)
-            .style("fill", mouseOverSurveyColor)
-            .style("opacity", 1)
-            .style("transition", "opacity 0.2s")
-            .attr("font-weight", 800)
-            .text(`${d.data.survey}`);
-        },
-        0)
-      )
-      .on(
-        "mouseout",
-        debounce(function (
-          this: SVGPathElement,
-          _event: any,
-          d: d3.SeriesPoint<DataType>
-        ) {
-          const classname = this.getAttribute("class") || "arc_1";
-          const i = classname.split("_")[1];
-          this.setAttribute(
-            "fill",
-            String(d.data!.color) || "#ffffff"
-          );
-          // this.setAttribute("style", "opacity: 0");
-          d3.selectAll(`.tooltip_${i}`).remove();
-        },
-        0)
-      );
+      .attr("data-tip", (item: d3.SeriesPoint<DataType>) => {
+        console.log(item);
+        return `${item.data.coreCompetency}@${item.data.survey}`;
+      })
+      .on("mouseover", function (
+        this: SVGPathElement,
+        _event: any,
+        _d: d3.SeriesPoint<DataType>
+      ) {
+        this.setAttribute("fill", mouseOverColor);
+        this.setAttribute(
+          "style",
+          "transition: fill 0.5s; cursor: pointer;"
+        );
+      })
+      .on("mouseout", function (
+        this: SVGPathElement,
+        _event: any,
+        d: d3.SeriesPoint<DataType>
+      ) {
+        this.setAttribute("fill", String(d.data!.color) || "#ffffff");
+      });
 
     const label = g
       .append("g")
@@ -224,6 +187,9 @@ export function Chart(props: PropType): JSX.Element {
       .style("font-size", 12);
     g.exit().remove();
   });
+  React.useEffect(() => {
+    ReactTooltip.rebuild();
+  });
   return (
     <AxisContainer ref={axisContainerRef} role="main">
       <Axis
@@ -232,6 +198,37 @@ export function Chart(props: PropType): JSX.Element {
         height={height}
         ref={containerRef}
         role="document"
+      />
+      <ReactTooltip
+        multiline
+        getContent={(dataTip: string) => {
+          if (isNull(dataTip)) return "";
+          const title = dataTip.split("@")[0];
+          const survey = dataTip.split("@")[1];
+          return (
+            <div>
+              <p
+                style={{
+                  color: mouseOverTitleColor,
+                  fontSize: "1em",
+                }}
+              >
+                {title}
+              </p>
+              <p
+                style={{
+                  color: mouseOverSurveyColor,
+                  fontSize: "1.5em",
+                }}
+              >
+                {survey}
+              </p>
+            </div>
+          );
+        }}
+        type="light"
+        effect="float"
+        delayHide={100}
       />
     </AxisContainer>
   );
