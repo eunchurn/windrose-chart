@@ -29,181 +29,241 @@ exports[`<Chart /> matches snapshot 1`] = `
         <g>
           <path
             class="arc_0"
+            currentItem="false"
             d="M3.3418327908936248e-15,-54.57627118644068A54.57627118644068,54.57627118644068,0,0,1,11.347044820901449,-53.38364871801448L4.158233816355189,-19.56295201467611A20,20,0,0,0,1.2246467991473533e-15,-20Z"
+            data-tip="Reading/Verbal Comprehension@1.2"
             fill="#8e44ad"
             transform="rotate(-6)"
           />
           <path
             class="arc_1"
+            currentItem="false"
             d="M17.936788241735517,-84.38595402940796A86.27118644067795,86.27118644067795,0,0,1,35.089652767047845,-78.81265049831929L8.134732861516005,-18.270909152852017A20,20,0,0,0,4.158233816355189,-19.56295201467611Z"
+            data-tip="Writing@2.3"
             fill="#7e44ad"
             transform="rotate(-6)"
           />
           <path
             class="arc_2"
+            currentItem="false"
             d="M36.2616058064188,-81.44490012203526A89.15254237288136,89.15254237288136,0,0,1,52.40254961115947,-72.12592187139361L11.755705045849464,-16.18033988749895A20,20,0,0,0,8.134732861516005,-18.270909152852017Z"
+            data-tip="Textual Analysis@2.4"
             fill="#6e44ad"
             transform="rotate(-6)"
           />
           <path
             class="arc_3"
+            currentItem="false"
             d="M64.25787927604155,-88.44338328336289A109.32203389830508,109.32203389830508,0,0,1,81.2421038021897,-73.15071883075653L14.862896509547884,-13.382612127177165A20,20,0,0,0,11.755705045849464,-16.18033988749895Z"
+            data-tip="Literary Knowledge@3.1"
             fill="#5e44ad"
             transform="rotate(-6)"
           />
           <path
             class="arc_4"
+            currentItem="false"
             d="M51.26439728293211,-46.15867064204327A68.98305084745762,68.98305084745762,0,0,1,59.74107446445194,-34.49152542372881L17.32050807568877,-10A20,20,0,0,0,14.862896509547884,-13.382612127177165Z"
+            data-tip="Foreign Language@1.7"
             fill="#4e44ad"
             transform="rotate(-6)"
           />
           <path
             class="arc_5"
+            currentItem="false"
             d="M122.12426033028015,-70.50847457627118A141.01694915254237,141.01694915254237,0,0,1,134.11508839958773,-43.57663378304343L19.02113032590307,-6.180339887498948A20,20,0,0,0,17.32050807568877,-10Z"
+            data-tip="Arithmetic/ Algebra@4.2"
             fill="#c0392b"
             transform="rotate(-6)"
           />
           <path
             class="arc_6"
+            currentItem="false"
             d="M172.47974109081596,-56.04206508155825A181.3559322033898,181.3559322033898,0,0,1,180.3624454311953,-18.95685689769307L19.890437907365467,-2.090569265353068A20,20,0,0,0,19.02113032590307,-6.180339887498948Z"
+            data-tip="Geometry/Trig/Spatial Orientation@5.6"
             fill="#c0492b"
             transform="rotate(-6)"
           />
           <path
             class="arc_7"
+            currentItem="false"
             d="M65.739582914174,-6.909508588878797A66.10169491525423,66.10169491525423,0,0,1,65.739582914174,6.909508588878782L19.890437907365467,2.090569265353068A20,20,0,0,0,19.890437907365467,-2.0905692653530723Z"
+            data-tip="Probability/Statistics/Modeling@1.6"
             fill="#c0592b"
             transform="rotate(-6)"
           />
           <path
             class="arc_8"
+            currentItem="false"
             d="M85.79858385465272,9.017794542921282A86.27118644067795,86.27118644067795,0,0,1,82.04877403292086,26.659262735059016L19.02113032590307,6.180339887498948A20,20,0,0,0,19.890437907365467,2.090569265353068Z"
+            data-tip="Calculus/Other advanced math@2.3"
             fill="#c0692b"
             transform="rotate(-6)"
           />
           <path
             class="arc_9"
+            currentItem="false"
             d="M172.47974109081596,56.04206508155825A181.3559322033898,181.3559322033898,0,0,1,157.05884441514397,90.67796610169488L17.320508075688775,9.999999999999996A20,20,0,0,0,19.02113032590307,6.180339887498948Z"
+            data-tip="Graphical Literacy@5.6"
             fill="#c0792b"
             transform="rotate(-6)"
           />
           <path
             class="arc_10"
+            currentItem="false"
             d="M162.04949928441022,93.55932203389827A187.1186440677966,187.1186440677966,0,0,1,139.0562520893294,125.20681176613206L14.86289650954789,13.382612127177161A20,20,0,0,0,17.320508075688775,9.999999999999996Z"
+            data-tip="Application of Scientific method or deductive reasoning@5.8"
             fill="#27ae60"
             transform="rotate(-6)"
           />
           <path
             class="arc_11"
+            currentItem="false"
             d="M126.20866358107615,113.6387911138264A169.83050847457628,169.83050847457628,0,0,1,99.82386827068787,137.3957675192707L11.755705045849469,16.180339887498942A20,20,0,0,0,14.86289650954789,13.382612127177161Z"
+            data-tip="Experimental/Prototype design and revision@5.2"
             fill="#27ae70"
             transform="rotate(-6)"
           />
           <path
             class="arc_12"
+            currentItem="false"
             d="M98.13024974713322,135.06470160327513A166.94915254237287,166.94915254237287,0,0,1,67.90433786943447,152.5156399623664L8.134732861516007,18.270909152852017A20,20,0,0,0,11.755705045849464,16.18033988749895Z"
+            data-tip="Synthesis or inference based on multiple lines of evidence@5.1"
             fill="#27ae80"
             transform="rotate(-6)"
           />
           <path
             class="arc_13"
+            currentItem="false"
             d="M74.93605610566017,168.30913770466222A184.23728813559322,184.23728813559322,0,0,1,38.30508608794996,180.21126135553334L4.158233816355193,19.56295201467611A20,20,0,0,0,8.134732861516007,18.270909152852017Z"
+            data-tip="Disciplinary Knowledge (Physics, biology, chemistry, medicine, engineering, etc.)@5.7"
             fill="#27ae90"
             transform="rotate(-6)"
           />
           <path
             class="arc_14"
+            currentItem="false"
             d="M29.319072332267126,137.93539047636037A141.01694915254237,141.01694915254237,0,0,1,7.125890329487831e-14,141.01694915254237L1.0106430996148605e-14,20A20,20,0,0,0,4.158233816355193,19.56295201467611Z"
+            data-tip="Data management/visualization@4.2"
             fill="#27aea0"
             transform="rotate(-6)"
           />
           <path
             class="arc_15"
+            currentItem="false"
             d="M3.518264956872481e-15,57.45762711864407A57.45762711864407,57.45762711864407,0,0,1,-11.946112404613618,56.20204010995935L-4.158233816355183,19.562952014676114A20,20,0,0,0,1.2246467991473533e-15,20Z"
+            data-tip="Constructing questions, gathering and synthesizing sources of cultural, geographical, and historical knowledge@1.3"
             fill="#2c3e50"
             transform="rotate(-6)"
           />
           <path
             class="arc_16"
+            currentItem="false"
             d="M-33.51254541825236,157.66413021997442A161.1864406779661,161.1864406779661,0,0,1,-65.56043179069249,147.2511407149345L-8.134732861515998,18.27090915285202A20,20,0,0,0,-4.158233816355183,19.562952014676114Z"
+            data-tip="Understanding of government, law, & politics@4.9"
             fill="#2c4e50"
             transform="rotate(-6)"
           />
           <path
             class="arc_17"
+            currentItem="false"
             d="M-22.198169333967382,49.85790463744365A54.57627118644068,54.57627118644068,0,0,1,-32.07912732850444,44.153130879446294L-11.755705045849453,16.180339887498953A20,20,0,0,0,-8.134732861515998,18.27090915285202Z"
+            data-tip="World history and geography: temporal and spatial views of the world, human-environmental interactions, (changing) spatial patterns and movement@1.2"
             fill="#2c5e50"
             transform="rotate(-6)"
           />
           <path
             class="arc_18"
+            currentItem="false"
             d="M-50.70893108760487,69.79485595539799A86.27118644067795,86.27118644067795,0,0,1,-64.11198579118535,57.72669129434895L-14.862896509547882,13.382612127177167A20,20,0,0,0,-11.75570504584946,16.18033988749895Z"
+            data-tip="Higher-level analysis: Evaluating sources of cultural and historical knowledge; developing claims from evidence@2.3"
             fill="#2c6e50"
             transform="rotate(-6)"
           />
           <path
             class="arc_19"
+            currentItem="false"
             d="M-38.41680877467885,34.59064998973759A51.69491525423729,51.69491525423729,0,0,1,-44.76910985665317,25.84745762711866L-17.32050807568877,10.000000000000007A20,20,0,0,0,-14.862896509547882,13.382612127177167Z"
+            data-tip="Communicating and critiquing historical, political, economic, or cultural viewpoints@1.1"
             fill="#2c7e50"
             transform="rotate(-6)"
           />
           <path
             class="arc_20"
+            currentItem="false"
             d="M-157.0588444151439,90.67796610169496A181.3559322033898,181.3559322033898,0,0,1,-172.47974109081596,56.04206508155827L-19.02113032590307,6.18033988749895A20,20,0,0,0,-17.32050807568877,10.000000000000007Z"
+            data-tip="Collaboration@5.6"
             fill="#0984e3"
             transform="rotate(-6)"
           />
           <path
             class="arc_21"
+            currentItem="false"
             d="M-158.7780794153773,51.59012533208869A166.94915254237287,166.94915254237287,0,0,1,-166.03458761656768,17.450938359091268L-19.890437907365467,2.0905692653530656A20,20,0,0,0,-19.02113032590307,6.18033988749895Z"
+            data-tip="Communication@5.1"
             fill="#0974e3"
             transform="rotate(-6)"
           />
           <path
             class="arc_22"
+            currentItem="false"
             d="M-171.7657307424187,18.053305774532134A172.71186440677963,172.71186440677963,0,0,1,-171.7657307424187,-18.05330577453194L-19.890437907365467,-2.090569265353061A20,20,0,0,0,-19.890437907365467,2.0905692653530834Z"
+            data-tip="Creativity@5.3"
             fill="#0964e3"
             transform="rotate(-6)"
           />
           <path
             class="arc_23"
+            currentItem="false"
             d="M-148.84115823901448,-15.643836112769094A149.66101694915255,149.66101694915255,0,0,1,-142.33608540485096,-46.24779763272517L-19.021130325903073,-6.1803398874989455A20,20,0,0,0,-19.890437907365467,-2.090569265353061Z"
+            data-tip="Critical Thinking@4.5"
             fill="#0954e3"
             transform="rotate(-6)"
           />
           <path
             class="arc_24"
+            currentItem="false"
             d="M-180.7007380960792,-58.71322893123998A190,190,0,0,1,-164.54482671904333,-95.00000000000001L-17.32050807568877,-10.000000000000002A20,20,0,0,0,-19.021130325903073,-6.1803398874989455Z"
+            data-tip="Tech Savvy (coding, touch-typing, troubleshooting abilities, software competency)@5.9"
             fill="#0944e3"
             transform="rotate(-6)"
           />
           <path
             class="arc_25"
+            currentItem="false"
             d="M-64.73172933371823,-37.37288135593216A74.7457627118644,74.7457627118644,0,0,1,-55.54692678568321,-50.014677526145135L-14.86289650954789,-13.382612127177158A20,20,0,0,0,-17.32050807568878,-9.999999999999988Z"
+            data-tip="Physical Effort@1.9"
             fill="#e84393"
             transform="rotate(-6)"
           />
           <path
             class="arc_26"
+            currentItem="false"
             d="M-139.0562520893294,-125.20681176613205A187.1186440677966,187.1186440677966,0,0,1,-109.98557941201533,-151.38216301524437L-11.755705045849465,-16.180339887498945A20,20,0,0,0,-14.86289650954789,-13.382612127177158Z"
+            data-tip="Mental Effort@5.8"
             fill="#d84393"
             transform="rotate(-6)"
           />
           <path
             class="arc_27"
+            currentItem="false"
             d="M-47.32169404049573,-65.13272412340677A80.50847457627118,80.50847457627118,0,0,1,-32.745746688305935,-73.54815125088736L-8.134732861516001,-18.27090915285202A20,20,0,0,0,-11.755705045849465,-16.180339887498945Z"
+            data-tip="Emotional Effort@2.1"
             fill="#c84393"
             transform="rotate(-6)"
           />
           <path
             class="arc_28"
+            currentItem="false"
             d="M-30.4018406095641,-68.28365200345539A74.7457627118644,74.7457627118644,0,0,1,-15.54051790688679,-73.11238846162851L-4.158233816355196,-19.56295201467611A20,20,0,0,0,-8.134732861516019,-18.27090915285201Z"
+            data-tip="Specialized art or craft knowledge (sketching, painting, carpentry, hair cutting, welding, etc)@1.9"
             fill="#b84393"
             transform="rotate(-6)"
           />
           <path
             class="arc_29"
+            currentItem="false"
             d="M-14.34238273946241,-67.47560567773878A68.98305084745762,68.98305084745762,0,0,1,-1.2671980862363712e-14,-68.98305084745762L-3.673940397442059e-15,-20A20,20,0,0,0,-4.158233816355196,-19.56295201467611Z"
+            data-tip="Appreciation of or critique of art/craft/design@1.7"
             fill="#a84393"
             transform="rotate(-6)"
           />
@@ -449,6 +509,89 @@ exports[`<Chart /> matches snapshot 1`] = `
         </g>
       </g>
     </svg>
+    <div
+      class="__react_component_tooltip t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb place-top type-dark"
+      data-id="tooltip"
+    >
+      <style>
+        
+  	.t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-top {
+        margin-top: -10px;
+    }
+    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-bottom {
+        margin-top: 10px;
+    }
+    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-left {
+        margin-left: -10px;
+    }
+    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-right {
+        margin-left: 10px;
+    }
+    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  
+      </style>
+      
+    </div>
   </div>
 </div>
 `;
