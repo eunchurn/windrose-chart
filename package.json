@@ -92,7 +92,7 @@
     "jest-styled-components": "^7.0.3",
     "prettier": "^2.1.2",
     "react-docgen-typescript-loader": "^3.7.2",
-    "react-is": "^16.13.1",
+    "react-is": "^17.0.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.33.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
