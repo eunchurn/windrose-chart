@@ -510,24 +510,24 @@ exports[`<Chart /> matches snapshot 1`] = `
       </g>
     </svg>
     <div
-      class="__react_component_tooltip t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb place-top type-dark"
+      class="__react_component_tooltip t0110c00c-fadf-4213-be3a-f408f829e551 place-top type-dark"
       data-id="tooltip"
     >
       <style>
         
-  	.t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb {
+  	.t0110c00c-fadf-4213-be3a-f408f829e551 {
 	    color: #fff;
 	    background: #222;
 	    border: 1px solid transparent;
   	}
 
-  	.t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-top {
+  	.t0110c00c-fadf-4213-be3a-f408f829e551.place-top {
         margin-top: -10px;
     }
-    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-top::before {
+    .t0110c00c-fadf-4213-be3a-f408f829e551.place-top::before {
         border-top: 8px solid transparent;
     }
-    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-top::after {
+    .t0110c00c-fadf-4213-be3a-f408f829e551.place-top::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         bottom: -6px;
@@ -538,13 +538,13 @@ exports[`<Chart /> matches snapshot 1`] = `
         border-top-width: 6px;
     }
 
-    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-bottom {
+    .t0110c00c-fadf-4213-be3a-f408f829e551.place-bottom {
         margin-top: 10px;
     }
-    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-bottom::before {
+    .t0110c00c-fadf-4213-be3a-f408f829e551.place-bottom::before {
         border-bottom: 8px solid transparent;
     }
-    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-bottom::after {
+    .t0110c00c-fadf-4213-be3a-f408f829e551.place-bottom::after {
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         top: -6px;
@@ -555,13 +555,13 @@ exports[`<Chart /> matches snapshot 1`] = `
         border-bottom-width: 6px;
     }
 
-    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-left {
+    .t0110c00c-fadf-4213-be3a-f408f829e551.place-left {
         margin-left: -10px;
     }
-    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-left::before {
+    .t0110c00c-fadf-4213-be3a-f408f829e551.place-left::before {
         border-left: 8px solid transparent;
     }
-    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-left::after {
+    .t0110c00c-fadf-4213-be3a-f408f829e551.place-left::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         right: -6px;
@@ -572,13 +572,13 @@ exports[`<Chart /> matches snapshot 1`] = `
         border-left-width: 6px;
     }
 
-    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-right {
+    .t0110c00c-fadf-4213-be3a-f408f829e551.place-right {
         margin-left: 10px;
     }
-    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-right::before {
+    .t0110c00c-fadf-4213-be3a-f408f829e551.place-right::before {
         border-right: 8px solid transparent;
     }
-    .t2a4e38f8-e4fb-4f5f-a498-ae77ea693adb.place-right::after {
+    .t0110c00c-fadf-4213-be3a-f408f829e551.place-right::after {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
         left: -6px;

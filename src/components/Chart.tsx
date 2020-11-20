@@ -96,10 +96,11 @@ export function Chart(props: PropType): JSX.Element {
         "class",
         (_d: d3.SeriesPoint<DataType>, i: number) => `arc_${i}`
       )
-      .attr("data-tip", (item: d3.SeriesPoint<DataType>) => {
-        console.log(item);
-        return `${item.data.coreCompetency}@${item.data.survey}`;
-      })
+      .attr(
+        "data-tip",
+        (item: d3.SeriesPoint<DataType>) =>
+          `${item.data.coreCompetency}@${item.data.survey}`
+      )
       .on("mouseover", function (
         this: SVGPathElement,
         _event: any,
