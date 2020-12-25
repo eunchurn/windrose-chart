@@ -1,6 +1,6 @@
 {
   "name": "@eunchurn/windrose-chart",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Windrose Chart Component (D3js implemented SVG rendering)",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
