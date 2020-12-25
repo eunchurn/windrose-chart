@@ -54,4 +54,12 @@ export default {
       // },
     }),
   ],
+  external: [
+    "lodash",
+    "react",
+    "react-dom",
+    "react-tooltip",
+    "d3",
+    "styled-components",
+  ],
 };
