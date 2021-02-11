@@ -11,6 +11,12 @@
         "digest"
       ],
       "automerge": true
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true
     }
   ]
 }
