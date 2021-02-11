@@ -60,7 +60,7 @@
     "@rollup/plugin-babel": "5.2.3",
     "@rollup/plugin-commonjs": "16.0.0",
     "@rollup/plugin-node-resolve": "10.0.0",
-    "@rollup/plugin-typescript": "6.1.0",
+    "@rollup/plugin-typescript": "8.1.1",
     "@storybook/addon-a11y": "6.1.17",
     "@storybook/addon-viewport": "6.1.17",
     "@storybook/react": "6.1.17",
