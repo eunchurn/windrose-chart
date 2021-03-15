@@ -97,7 +97,7 @@
     "rimraf": "3.0.2",
     "rollup": "2.41.2",
     "rollup-plugin-peer-deps-external": "2.2.4",
-    "snyk": "1.486.0",
+    "snyk": "1.487.0",
     "standard-version": "9.1.1",
     "ts-jest": "26.5.3",
     "ts-loader": "8.0.18",
