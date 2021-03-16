@@ -95,7 +95,7 @@
     "react-docgen-typescript-loader": "3.7.2",
     "react-is": "16.13.1",
     "rimraf": "3.0.2",
-    "rollup": "2.41.2",
+    "rollup": "2.41.3",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "snyk": "1.489.0",
     "standard-version": "9.1.1",
