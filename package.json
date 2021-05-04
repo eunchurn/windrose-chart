@@ -98,7 +98,7 @@
     "rollup": "2.47.0",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "snyk": "1.576.0",
-    "standard-version": "9.2.0",
+    "standard-version": "9.3.0",
     "ts-jest": "26.5.5",
     "ts-loader": "9.1.1",
     "ts-node": "9.1.1",
