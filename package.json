@@ -79,7 +79,7 @@
     "babel-loader": "8.2.2",
     "babel-preset-react-app": "10.0.0",
     "enzyme": "3.11.0",
-    "eslint": "7.28.0",
+    "eslint": "7.29.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "8.3.0",
     "eslint-config-typescript": "3.0.0",
