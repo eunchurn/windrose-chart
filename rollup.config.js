@@ -26,7 +26,7 @@ export default {
     external(),
     resolve({
       customResolveOptions: {
-        moduleDirectory: "src",
+        moduleDirectories: ["src"],
       },
       extensions: [".js", ".jsx", ".ts", "tsx"],
     }),
