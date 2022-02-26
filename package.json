@@ -102,7 +102,7 @@
     "lodash": "^4.17.21",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-tooltip": "^4.2.10",
+    "react-tooltip": "^4.2.21",
     "styled-components": "^5.3.3"
   },
   "snyk": false
