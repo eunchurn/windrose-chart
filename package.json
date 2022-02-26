@@ -47,13 +47,6 @@
     "postinstall": "node ./scripts/postinstall.js",
     "release": "standard-version"
   },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "jsdom",
-    "testPathIgnorePatterns": [
-      "dist/"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "7.17.5",
     "@babel/plugin-transform-runtime": "7.17.0",

@@ -5,7 +5,7 @@ const NO_COVERAGE = process.env.NO_COVERAGE === "1";
 const CLEAR_CONSOLE = process.env.CLEAR_CONSOLE === "1";
 
 const notice = () =>
-  console.log("Using Jest config from `jest.config.js`");
+  console.log("Using Jest config from `jest.config.ts`");
 
 if (CLEAR_CONSOLE) {
   require("clear")();
@@ -46,6 +46,7 @@ module.exports = {
     "/coverage/",
     "/stories/",
     "/\\.storybook/",
+    "/dist/",
   ],
   // don't watch for file changes in node_modules
   watchPathIgnorePatterns: ["/node_modules/"],
@@ -70,7 +71,7 @@ module.exports = {
 
   globals: {
     "ts-jest": {
-      tsConfig: `${__dirname}/tsconfig.json`,
+      tsconfig: `${__dirname}/tsconfig.json`,
 
       // https://huafu.github.io/ts-jest/user/config/diagnostics
       diagnostics: false,
