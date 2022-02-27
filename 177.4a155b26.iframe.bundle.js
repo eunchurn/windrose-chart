@@ -1,1 +1,0 @@
-(self.webpackChunk_eunchurn_windrose_chart=self.webpackChunk_eunchurn_windrose_chart||[]).push([[177],{"?6eb0":()=>{}}]);
