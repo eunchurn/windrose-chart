@@ -1,7 +1,7 @@
-{
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["typescript", "import", "react-hooks"],
-  "extends": [
+module.exports = {
+  parser: "@typescript-eslint/parser",
+  plugins: ["typescript", "import", "react-hooks"],
+  extends: [
     "airbnb",
     "prettier",
     "typescript",
@@ -9,9 +9,9 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
   ],
-  "rules": {
+  rules: {
     "prettier/prettier": "error",
     "import/no-unresolved": "error",
     "import/extensions": "off",
@@ -26,6 +26,6 @@
     "import/no-named-as-default": "off",
     "@typescript-eslint/no-use-before-define": ["off"],
     "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/no-non-null-assertion": "off"
-  }
-}
+    "@typescript-eslint/no-non-null-assertion": "off",
+  },
+};
