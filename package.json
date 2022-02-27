@@ -119,7 +119,7 @@
   "snyk": false,
   "resolutions": {
     "**/trim": "^1.0.0",
-    "**/ansi-regex": "^5.0.1",
+    "**/ansi-regex": "^6.0.0",
     "**/trim-newlines": "^3.0.1",
     "**/glob-parent": "^5.1.2"
   }
