@@ -101,24 +101,33 @@ export function Chart(props: PropType): JSX.Element {
         (item: d3.SeriesPoint<DataType>) =>
           `${item.data.coreCompetency}@${item.data.survey}`
       )
-      .on("mouseover", function (
-        this: SVGPathElement,
-        _event: any,
-        _d: d3.SeriesPoint<DataType>
-      ) {
-        this.setAttribute("fill", mouseOverColor);
-        this.setAttribute(
-          "style",
-          "transition: fill 0.5s; cursor: pointer;"
-        );
-      })
-      .on("mouseout", function (
-        this: SVGPathElement,
-        _event: any,
-        d: d3.SeriesPoint<DataType>
-      ) {
-        this.setAttribute("fill", String(d.data!.color) || "#ffffff");
-      });
+      .on(
+        "mouseover",
+        function (
+          this: SVGPathElement,
+          _event: any,
+          _d: d3.SeriesPoint<DataType>
+        ) {
+          this.setAttribute("fill", mouseOverColor);
+          this.setAttribute(
+            "style",
+            "transition: fill 0.5s; cursor: pointer;"
+          );
+        }
+      )
+      .on(
+        "mouseout",
+        function (
+          this: SVGPathElement,
+          _event: any,
+          d: d3.SeriesPoint<DataType>
+        ) {
+          this.setAttribute(
+            "fill",
+            String(d.data!.color) || "#ffffff"
+          );
+        }
+      );
 
     const label = g
       .append("g")
@@ -139,7 +148,8 @@ export function Chart(props: PropType): JSX.Element {
       .append("text")
       .attr("transform", "rotate(90)translate(0,-9)")
       .text((_d, i) => columns[i])
-      .style("font-size", 14);
+      .style("font-size", 14)
+      .style("font-family", `'Noto Sans KR', sans-serif`);
     const yAxis = g.append("g").attr("text-anchor", "middle");
     const yTick = yAxis
       .selectAll("g")
@@ -160,7 +170,8 @@ export function Chart(props: PropType): JSX.Element {
       .attr("dy", "-0.35em")
       .attr("x", () => -10)
       .text(y.tickFormat(5, "s"))
-      .style("font-size", 14);
+      .style("font-size", 14)
+      .style("font-family", `'Noto Sans KR', sans-serif`);
     const legend = g
       .append("g")
       .selectAll("g")
@@ -185,7 +196,8 @@ export function Chart(props: PropType): JSX.Element {
       .attr("y", 9)
       .attr("dy", "0.35em")
       .text((d) => d)
-      .style("font-size", 12);
+      .style("font-size", 12)
+      .style("font-family", `'Noto Sans KR', sans-serif`);
     g.exit().remove();
   });
   React.useEffect(() => {
@@ -212,6 +224,7 @@ export function Chart(props: PropType): JSX.Element {
                 style={{
                   color: mouseOverTitleColor,
                   fontSize: "1em",
+                  fontFamily: `'Noto Sans KR', sans-serif`,
                 }}
               >
                 {title}
@@ -220,6 +233,7 @@ export function Chart(props: PropType): JSX.Element {
                 style={{
                   color: mouseOverSurveyColor,
                   fontSize: "1.5em",
+                  fontFamily: `'Noto Sans KR', sans-serif`,
                 }}
               >
                 {survey}
@@ -237,6 +251,7 @@ export function Chart(props: PropType): JSX.Element {
 
 export const AxisContainer = styled.div`
   position: relative;
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap");
 `;
 
 export const Axis = styled.svg`
