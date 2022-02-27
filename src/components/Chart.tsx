@@ -111,7 +111,7 @@ export function Chart(props: PropType): JSX.Element {
           this.setAttribute("fill", mouseOverColor);
           this.setAttribute(
             "style",
-            "transition: fill 0.5s; cursor: pointer;"
+            "transition: fill 0.5s; cursor: pointer; outline: none;"
           );
         }
       )
@@ -214,6 +214,7 @@ export function Chart(props: PropType): JSX.Element {
       />
       <ReactTooltip
         multiline
+        insecure={false}
         getContent={(dataTip: string) => {
           if (isNull(dataTip)) return "";
           const title = dataTip.split("@")[0];
