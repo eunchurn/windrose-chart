@@ -8,3 +8,4 @@ coverage
 yarn.lock
 yarn-error.log
 build-story
+storybook-static
