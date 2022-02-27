@@ -12,10 +12,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm test
-      - run: bash <(curl -s https://codecov.io/bash)
-      - run: npm run build
+      - run: yarn
+      - run: yarn test
+      - run: yarn build
 
   publish-npm:
     needs: build
@@ -26,7 +25,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - run: yarn
       - name: "Publish to Node Package Manager"
         run: |
           npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
@@ -52,7 +51,7 @@ jobs:
           scope: '@eunchurn'
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_GITHUB_TOKEN}}
-      - run: npm ci
+      - run: yarn
       - name: "Publish to Github Package Registry"
         run: |
           echo "registry=https://npm.pkg.github.com/eunchurn" >> ~/.npmrc
