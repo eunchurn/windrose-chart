@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Chart /> matches snapshot 1`] = `
-.c0 {
+400&display=swap"); .c0 {
   position: relative;
 }
 
@@ -274,6 +274,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             transform="rotate(-66)translate(190,0)"
           >
             <text
+              style="font-family: 'Noto Sans KR', sans-serif;"
               transform="rotate(90)translate(0,-9)"
             >
               Language Arts
@@ -284,6 +285,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             transform="rotate(-6)translate(190,0)"
           >
             <text
+              style="font-family: 'Noto Sans KR', sans-serif;"
               transform="rotate(90)translate(0,-9)"
             >
               Math
@@ -294,6 +296,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             transform="rotate(53.99999999999997)translate(190,0)"
           >
             <text
+              style="font-family: 'Noto Sans KR', sans-serif;"
               transform="rotate(90)translate(0,-9)"
             >
               Science
@@ -304,6 +307,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             transform="rotate(113.99999999999997)translate(190,0)"
           >
             <text
+              style="font-family: 'Noto Sans KR', sans-serif;"
               transform="rotate(90)translate(0,-9)"
             >
               Social Studies
@@ -314,6 +318,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             transform="rotate(174)translate(190,0)"
           >
             <text
+              style="font-family: 'Noto Sans KR', sans-serif;"
               transform="rotate(90)translate(0,-9)"
             >
               21st Century Skills
@@ -324,6 +329,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             transform="rotate(233.99999999999994)translate(190,0)"
           >
             <text
+              style="font-family: 'Noto Sans KR', sans-serif;"
               transform="rotate(90)translate(0,-9)"
             >
               Arts, Crafts & Labor
@@ -342,6 +348,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             />
             <text
               dy="-0.35em"
+              style="font-family: 'Noto Sans KR', sans-serif;"
               x="-10"
               y="-48.813559322033896"
             >
@@ -357,6 +364,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             />
             <text
               dy="-0.35em"
+              style="font-family: 'Noto Sans KR', sans-serif;"
               x="-10"
               y="-77.62711864406779"
             >
@@ -372,6 +380,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             />
             <text
               dy="-0.35em"
+              style="font-family: 'Noto Sans KR', sans-serif;"
               x="-10"
               y="-106.4406779661017"
             >
@@ -387,6 +396,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             />
             <text
               dy="-0.35em"
+              style="font-family: 'Noto Sans KR', sans-serif;"
               x="-10"
               y="-135.25423728813558"
             >
@@ -402,6 +412,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             />
             <text
               dy="-0.35em"
+              style="font-family: 'Noto Sans KR', sans-serif;"
               x="-10"
               y="-164.0677966101695"
             >
@@ -420,6 +431,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             />
             <text
               dy="0.35em"
+              style="font-family: 'Noto Sans KR', sans-serif;"
               x="24"
               y="9"
             >
@@ -436,6 +448,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             />
             <text
               dy="0.35em"
+              style="font-family: 'Noto Sans KR', sans-serif;"
               x="24"
               y="9"
             >
@@ -452,6 +465,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             />
             <text
               dy="0.35em"
+              style="font-family: 'Noto Sans KR', sans-serif;"
               x="24"
               y="9"
             >
@@ -468,6 +482,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             />
             <text
               dy="0.35em"
+              style="font-family: 'Noto Sans KR', sans-serif;"
               x="24"
               y="9"
             >
@@ -484,6 +499,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             />
             <text
               dy="0.35em"
+              style="font-family: 'Noto Sans KR', sans-serif;"
               x="24"
               y="9"
             >
@@ -500,6 +516,7 @@ exports[`<Chart /> matches snapshot 1`] = `
             />
             <text
               dy="0.35em"
+              style="font-family: 'Noto Sans KR', sans-serif;"
               x="24"
               y="9"
             >
