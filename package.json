@@ -121,7 +121,7 @@
     "**/trim": "^1.0.0",
     "**/ansi-regex": "^5.0.1",
     "**/trim-newlines": "^3.0.1",
-    "**/glob-parent": "^5.1.2"
+    "**/glob-parent": "^6.0.0"
   },
   "engines": {
     "node": ">=12"
