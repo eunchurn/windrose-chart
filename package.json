@@ -116,5 +116,11 @@
     "react-tooltip": "^4.2.21",
     "styled-components": "^5.3.3"
   },
-  "snyk": false
+  "snyk": false,
+  "resolutions": {
+    "**/trim": "^1.0.0",
+    "**/ansi-regex": "^5.0.1",
+    "**/trim-newlines": "^3.0.1",
+    "**/glob-parent": "^5.1.2"
+  }
 }

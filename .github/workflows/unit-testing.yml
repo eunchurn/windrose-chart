@@ -14,30 +14,26 @@ jobs:
         node-version: [10.x, 12.x, 14.x]
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v2.3.1
         with:
           persist-credentials: false
       - name: Cache node modules 🗄
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
+        id: yarn-cache-dir-path
+        run: |
+          echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
-          restore-keys:
-            |
-            ${{ runner.OS }}-build-${{ env.cache-name }}-
-            ${{ runner.OS }}-build-
-            ${{ runner.OS }}-
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-
       - name: Install 🔧 
-        run: |
-          npm install
+        run: yarn --prefer-offline
       - name: TypeCheck 📝
-        run: |
-          npm run typecheck
+        run: yarn typecheck
       - name: Unit Testing 🚥 
-        run: |
-          npm run test
+        run: yarn test
       - name: Report Codecov 🔍 
         uses: codecov/codecov-action@v2
         with:
@@ -56,7 +52,7 @@ jobs:
             await github.pulls.createReview({
               ...context.repo,
               pull_number,
-              body:"Check your code... 🙏🙏",
+              body: "Testing failed",
               event: "REQUEST_CHANGES"
             })
         if: failure()
