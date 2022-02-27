@@ -5,7 +5,6 @@ coverage
 yarn-error.log
 tmp
 coverage
-yarn.lock
 yarn-error.log
 build-story
 storybook-static
