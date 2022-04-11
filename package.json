@@ -69,7 +69,7 @@
     "@storybook/react": "6.5.0-alpha.61",
     "@storybook/testing-library": "0.0.9",
     "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "12.1.4",
+    "@testing-library/react": "12.1.5",
     "@types/d3": "6.7.5",
     "@types/jest": "27.4.1",
     "@types/lodash": "4.14.181",
