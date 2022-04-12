@@ -35,7 +35,7 @@ jobs:
       - name: Unit Testing 🚥 
         run: yarn test
       - name: Report Codecov 🔍 
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           flags: unittests # optional
