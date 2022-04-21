@@ -67,7 +67,7 @@
     "@storybook/builder-webpack5": "6.5.0-alpha.64",
     "@storybook/manager-webpack5": "6.5.0-alpha.64",
     "@storybook/react": "6.5.0-alpha.64",
-    "@storybook/testing-library": "0.0.10",
+    "@storybook/testing-library": "0.0.11",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "12.1.5",
     "@types/d3": "6.7.5",
