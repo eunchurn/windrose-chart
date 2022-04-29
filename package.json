@@ -49,9 +49,9 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@babel/core": "7.17.9",
+    "@babel/core": "7.17.10",
     "@babel/plugin-proposal-class-properties": "7.16.7",
-    "@babel/plugin-transform-runtime": "7.17.0",
+    "@babel/plugin-transform-runtime": "7.17.10",
     "@babel/preset-typescript": "7.16.7",
     "@rollup/plugin-babel": "5.3.1",
     "@rollup/plugin-commonjs": "22.0.0",
