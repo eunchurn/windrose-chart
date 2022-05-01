@@ -1,8 +1,9 @@
 // import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
 import external from "rollup-plugin-peer-deps-external";
-import resolve from "@rollup/plugin-node-resolve";
+// import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
+import typescript from "@rollup/plugin-typescript";
 
 import pkg from "./package.json";
 
@@ -24,18 +25,18 @@ export default {
   ],
   plugins: [
     external(),
-    resolve({
-      customResolveOptions: {
-        moduleDirectories: ["src"],
-      },
-      extensions: [".js", ".jsx", ".ts", "tsx"],
-    }),
-    // typescript({
-    //   // rollupCommonJSResolveHack: true,
-    //   lib: ["es5", "es6", "dom"],
-    //   target: "es5",
-    //   exclude: ["**/__tests__/**"],
+    // resolve({
+    //   customResolveOptions: {
+    //     moduleDirectories: ["src"],
+    //   },
+    //   extensions: [".js", ".jsx", ".ts", "tsx"],
     // }),
+    typescript({
+      // rollupCommonJSResolveHack: true,
+      lib: ["es5", "es6", "dom"],
+      target: "es5",
+      exclude: ["**/__tests__/**"],
+    }),
     babel({
       extensions: [".js", ".jsx", ".ts", ".tsx"],
       exclude: "node_modules/**",
