@@ -610,7 +610,6 @@ exports[`<Chart /> matches snapshot 1`] = `
     }
   
       </style>
-      
     </div>
   </div>
 </div>
