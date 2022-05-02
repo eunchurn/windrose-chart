@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/eunchurn/windrose-chart/compare/v0.2.1...v0.2.2) (2022-05-02)
+
+
+### Bug Fixes
+
+* **deps:** update ([4a70440](https://github.com/eunchurn/windrose-chart/commit/4a70440930a41d8cd8fddf565a2e04b2bc2568f0))
+* **deps:** update react monorepo to v17 ([ed32c3c](https://github.com/eunchurn/windrose-chart/commit/ed32c3cdf72da7b2df24ceb0a6d6a4cb167891c3))
+* **minimist:** vulnerability fix ([919bc9a](https://github.com/eunchurn/windrose-chart/commit/919bc9a50d7b47ea77c41046fc5feba4424fe83b))
+* **script:** ci ([ab7aa0e](https://github.com/eunchurn/windrose-chart/commit/ab7aa0ea25aed5e64b0f7b1d1c74d5d0190504bf))
+
 ### [0.2.1](https://github.com/eunchurn/windrose-chart/compare/v0.2.0...v0.2.1) (2022-02-27)
 
 
