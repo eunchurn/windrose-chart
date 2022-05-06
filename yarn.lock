@@ -2011,10 +2011,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snyk/protect@1.921.0":
-  version "1.921.0"
-  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.921.0.tgz#2a952d93a054f64cda82ca9313d4eb2f4ff44eb4"
-  integrity sha512-GT0gbpkiepkCX+/R/yrDWh93I/ul4MriPD7AhMCQWGaFo458uQGk9cWMjmWR/oSGPpfk942UyankFwb4+kgfjw==
+"@snyk/protect@1.922.0":
+  version "1.922.0"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.922.0.tgz#3d56da55f0f0a0bc7e5a8811c4a315bea9d77830"
+  integrity sha512-DC6LJu3wfLW9T5LZou++HlIXIhQzIwFWJ7zA5iBIn0i5UQHzsIJU6r9msAhT7YE45WEeBidsNAQXbxolkGBxyg==
 
 "@storybook/addon-a11y@6.5.0-beta.6":
   version "6.5.0-beta.6"
