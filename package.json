@@ -106,7 +106,7 @@
     "rimraf": "3.0.2",
     "rollup": "2.73.0",
     "rollup-plugin-peer-deps-external": "2.2.4",
-    "standard-version": "9.3.2",
+    "standard-version": "9.5.0",
     "ts-jest": "28.0.2",
     "ts-loader": "9.3.0",
     "ts-node": "10.7.0",
