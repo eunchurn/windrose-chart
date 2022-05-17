@@ -95,7 +95,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.5.0",
-    "eslint-plugin-storybook": "0.5.11",
+    "eslint-plugin-storybook": "0.5.12",
     "html-webpack-plugin": "5.5.0",
     "jest": "28.1.0",
     "jest-environment-jsdom": "28.1.0",
