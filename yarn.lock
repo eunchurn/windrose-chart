@@ -2159,10 +2159,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snyk/protect@1.931.0":
-  version "1.931.0"
-  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.931.0.tgz#39d57f459e9f36573261c32c196051da5f5ba679"
-  integrity sha512-FNgtMWsAbQGpmAw8UX+HOfLcGupXEGDDKWYMQRlgZYy+DIPHb4WUYw6unt1bJCupMC/FS2rXVqqRgCMhoVgcfA==
+"@snyk/protect@1.932.0":
+  version "1.932.0"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.932.0.tgz#9bb1716e782b2b1eda3f26842c931f12cba9344a"
+  integrity sha512-fDU/soZ/o5ykQtaoZNh7qdPolDKL94nVxmmO66Wf0Emu1y9J+kAw98VAacaf8/gKtZc7HtzwsFW5K9SBqm/qcg==
 
 "@storybook/addon-a11y@6.5.0":
   version "6.5.0"
