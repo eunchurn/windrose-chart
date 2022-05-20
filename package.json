@@ -57,7 +57,7 @@
     "@rollup/plugin-commonjs": "22.0.0",
     "@rollup/plugin-node-resolve": "13.3.0",
     "@rollup/plugin-typescript": "8.3.2",
-    "@snyk/protect": "1.934.0",
+    "@snyk/protect": "1.935.0",
     "@storybook/addon-a11y": "6.5.3",
     "@storybook/addon-actions": "6.5.3",
     "@storybook/addon-essentials": "6.5.3",
