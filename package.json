@@ -123,7 +123,7 @@
   "snyk": false,
   "resolutions": {
     "**/trim": "^1.0.0",
-    "**/ansi-regex": "^5.0.1",
+    "**/ansi-regex": "^6.0.0",
     "**/trim-newlines": "^4.0.0",
     "**/glob-parent": "^6.0.0",
     "minimist": "^1.2.6"
